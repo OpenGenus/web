@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="static/custom.css">
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
 <script language="JavaScript" type="text/javascript" src="static/custom.js"></script>
 
@@ -104,15 +105,15 @@
             </p>
 
           </p>
-          <div class="contributors p-5">
-
-          </div>
         </div>
       </div>
-
-
     </div>
   </section>
+
+
+  <div class="contributors py-5">
+
+  </div>
 
   <section id="sec-contact" class="sec-contact pt-5 pb-5">
     <div class="container">
@@ -149,15 +150,19 @@
 
 <script>
   let contributors = [],images = '<h1 class="h4">Cosmos Contributors</h1>';
-    fetch('https://api.github.com/repos/opengenus/cosmos/contributors')
-    .then(raw => raw.json())
-    .then(function(data){
-      let container = document.getElementsByClassName('contributors')[0];
-      for(let i = 0 ; i< data.length ; i++){
-         images += `<a href=${data[i].html_url} target="_blank">
-          <img src=${data[i].avatar_url} alt=${data[i].login} />
-          </a>`
-      }
-      container.innerHTML = images;
-    })
+  for(let i=0;i<=5;i++)
+    {
+      fetch(`https://api.github.com/repositories/103749180/contributors?per_page=100&page=${i}`)
+      .then(raw => raw.json())
+      .then(function(data){
+        let container = document.getElementsByClassName('contributors')[0];
+        for(let i = 0 ; i< data.length ; i++){
+           images += `<a href=${data[i].html_url} target="_blank">
+            <img src=${data[i].avatar_url} alt=${data[i].login} />
+            </a>`
+        }
+        container.innerHTML = images;
+      })
+    }
+
 </script>
