@@ -149,20 +149,17 @@
   </footer>
 
 <script>
-  let contributors = [],images = '<h1 class="h4">Cosmos Contributors</h1>';
-  for(let i=0;i<=5;i++)
-    {
-      fetch(`https://api.github.com/repositories/103749180/contributors?per_page=100&page=${i}`)
-      .then(raw => raw.json())
-      .then(function(data){
-        let container = document.getElementsByClassName('contributors')[0];
-        for(let i = 0 ; i< data.length ; i++){
-           images += `<a href=${data[i].html_url} target="_blank">
-            <img src=${data[i].avatar_url} alt=${data[i].login} />
-            </a>`
-        }
-        container.innerHTML = images;
-      })
-    }
 
+  $(document).ready(function(){
+    $.getJSON("static/contributors.json", function(data) {
+      let images = '<h1 class="h4">Cosmos Contributors</h1>';
+      let container = document.getElementsByClassName('contributors')[0];
+      for(let i = 0 ; i< data.length ; i++){
+         images += `<a href=${data[i].link} target="_blank">
+          <img src=${data[i].user_image} alt=${data[i].name} />
+          </a>`
+      }
+      container.innerHTML = images;
+  })
+})
 </script>
