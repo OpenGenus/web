@@ -104,16 +104,17 @@
               <a class="btn btn-primary btn-lg" href="https:github.com/opengenus/cosmos" target="_blank" role="button">Cosmos on GitHub</a>
             </p>
 
+            <div class="contributors py-5">
+            	{% for d in data.data %}
+            	    <a href={{d.link}} target="_blank"><img src={{d.user_image}} alt={{d.name}} /></a>
+            	{% endfor %}
+            </div>
+
           </p>
         </div>
       </div>
     </div>
   </section>
-
-
-  <div class="contributors py-5">
-
-  </div>
 
   <section id="sec-contact" class="sec-contact pt-5 pb-5">
     <div class="container">
@@ -147,19 +148,3 @@
         </li>
       </ul>
   </footer>
-
-<script>
-
-  $(document).ready(function(){
-    $.getJSON("static/contributors.json", function(data) {
-      let images = '<h1 class="h4">Cosmos Contributors</h1>';
-      let container = document.getElementsByClassName('contributors')[0];
-      for(let i = 0 ; i< data.length ; i++){
-         images += `<a href=${data[i].link} target="_blank">
-          <img src=${data[i].user_image} alt=${data[i].name} />
-          </a>`
-      }
-      container.innerHTML = images;
-  })
-})
-</script>
