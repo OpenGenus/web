@@ -104,9 +104,10 @@
               <a class="btn btn-primary btn-lg" href="https:github.com/opengenus/cosmos" target="_blank" role="button">Cosmos on GitHub</a>
             </p>
 
-            <div class="contributors py-5">
+            <div class="contributors py-4">
+              <h1 class="h4">Cosmos Contributors</h1>
             	{% for d in data.data %}
-            	    <a href={{d.link}} target="_blank"><img src={{d.user_image}} alt={{d.name}} /></a>
+            	    <a href={{d.link}} target="_blank" class="d-inline-block my-1" style="width:4%;"><img src={{d.user_image}} alt={{d.name}} class="rounded-circle mw-100 mh-100" /></a>
             	{% endfor %}
             </div>
 

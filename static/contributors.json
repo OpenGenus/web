@@ -1,4 +1,5 @@
 {
+  "data":
   [
     {
   "user_image": "https://avatars3.githubusercontent.com/u/10634210?v=4",
@@ -1455,7 +1456,13 @@
   "link": "https://github.com/ms10398",
   "name": "ms10398",
   "contributions": 3
-},"contributions": 3"link": "https://github.com/ms10398""name": "ms10398""user_image": "https://avatars0.githubusercontent.com/u/26259547?v=4"__proto__: Object{
+},
+{
+  "contributions": 3,
+  "link": "https://github.com/ms10398",
+  "name": "ms10398",
+  "user_image": "https://avatars0.githubusercontent.com/u/26259547?v=4"
+},{
   "user_image": "https://avatars0.githubusercontent.com/u/21006553?v=4",
   "link": "https://github.com/Mujazoji",
   "name": "Mujazoji",

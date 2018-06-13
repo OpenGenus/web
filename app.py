@@ -1,5 +1,6 @@
 from flask import Flask, render_template, send_from_directory
 import os
+import json
 
 app = Flask(__name__)
 
@@ -35,4 +36,4 @@ def logo():
 	return send_from_directory('static/files', 'logo.jpg')
 
 if __name__ == '__main__':
-	app.run(host=os.getenv('IP', '0.0.0.0'),port=int(os.getenv('PORT', 8080)))
+	app.run(debug=True,host=os.getenv('IP', '0.0.0.0'),port=int(os.getenv('PORT', 8080)))
