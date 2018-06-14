@@ -31,6 +31,13 @@ def home_iq():
 def home_discuss():
     return render_template('h/discuss.html')
 
+@app.route('/intern/<username>')
+def user(username):
+    SITE_ROOT = os.path.realpath(os.path.dirname(__file__))
+    json_url = os.path.join(SITE_ROOT, "static/user/intern/", username+".json")
+    data = json.load(open(json_url))
+    return render_template('h/intern.html', username=username, data=data)
+
 @app.route('/logo')
 def logo():
 	return send_from_directory('static/files', 'logo.jpg')
