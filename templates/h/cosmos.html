@@ -108,7 +108,7 @@
             <div class="contributors py-4">
               <h1 class="h4">Cosmos Contributors</h1>
             	{% for d in data.data %}
-            	    <a href={{d.link}} target="_blank" class="d-inline-block my-1" data-toggle="tooltip" title={{d.contributions}}  style="width:6%;"><img src={{d.user_image}} alt={{d.name}} class="rounded-circle mw-100 mh-100" /></a>
+            	    <a href={{d.link}} target="_blank" class="d-inline-block my-1" data-toggle="tooltip" title="Contributions: {{d.contributions}}"  style="width:6%;"><img src={{d.user_image}} alt={{d.name}} class="rounded-circle mw-100 mh-100" /></a>
             	{% endfor %}
             </div>
 
