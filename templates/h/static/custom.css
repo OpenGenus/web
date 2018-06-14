@@ -157,7 +157,7 @@ header {
 
 }
 
-hr { 
+hr {
     display: block;
     margin-top: 0.5em;
     margin-bottom: 0.5em;
@@ -165,7 +165,7 @@ hr {
     margin-right: auto;
     border-style: inset;
     border-width: 1px;
-} 
+}
 
 .wrapper1 {
   display: inline-flex;
