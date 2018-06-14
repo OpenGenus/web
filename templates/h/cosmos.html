@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="static/custom.css">
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
 <script language="JavaScript" type="text/javascript" src="static/custom.js"></script>
@@ -107,7 +108,7 @@
             <div class="contributors py-4">
               <h1 class="h4">Cosmos Contributors</h1>
             	{% for d in data.data %}
-            	    <a href={{d.link}} target="_blank" class="d-inline-block my-1" style="width:4%;"><img src={{d.user_image}} alt={{d.name}} class="rounded-circle mw-100 mh-100" /></a>
+            	    <a href={{d.link}} target="_blank" class="d-inline-block my-1" data-toggle="tooltip" title={{d.contributions}}  style="width:6%;"><img src={{d.user_image}} alt={{d.name}} class="rounded-circle mw-100 mh-100" /></a>
             	{% endfor %}
             </div>
 
