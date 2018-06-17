@@ -1,0 +1,63 @@
+<html>
+
+  <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/static/intern.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,400,500" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, user-scalable=no">
+  </head>
+  <body>
+    <nav class="navbar bg-light">
+      <a href=""><span class="navbar-brand mb-0 h1 text-uppercase text-dark">OpenGenus Foundation</span></a>
+    </nav>
+    <div class="fluid-container p-5">
+      <div class="row p-2">
+        <div class="col-3 bg-light p-4 card-shadow">
+          <div class="w-50 p-2 mx-auto">
+            <img src="/static/user/intern/picture/{{username}}.jpeg" class="rounded-circle mw-100 mh-100" alt={{data.username}}>
+          </div>
+          <div class="py-4 px-3 mt-2">
+            <h4 class="font-weight-normal blue-color">{{data.username}}</h4>
+            <h5 class="font-weight-light blue-color">{{data.profile}}</h5>
+            <h6 class="font-weight-light purple-color">{{data.start}} - {{data.end}}</h6>
+            <button type="button" class="btn btn-primary btn-lg btn-block mt-4 rounded-0 disclosure font-weight-light">Talk on Disclosure</button>
+          </div>
+        </div>
+        <div class="col-8 ml-auto bg-light p-4 card-shadow">
+          <div class="p-2">
+            <h5 class="heading pl-3">About {{data.username}}</h5>
+            <p class="pl-3 description py-1">{{data.about}}</p>
+          </div>
+          <div class="p-2">
+            <h5 class="heading pl-3">About Projects</h5>
+            <p class="pl-3 description py-1">{{data.project}}</p>
+          </div>
+          <div class="p-2">
+            <h5 class="heading pl-3">Favorite Experience</h5>
+            <p class="pl-3 description py-1">{{data.favorite_experience}}</p>
+          </div>
+        </div>
+      </div>
+      <div class="fixed-bottom bg-dark py-2">
+        <ul class="list-inline mb-0 text-center">
+          <li class="list-inline-item">
+            <a href="https://twitter.com/opengenus" target="_blank"><span class="fa fa-twitter text-light"></span></a>
+          </li>
+
+          <li class="list-inline-item">
+            <a href="https://github.com/opengenus" target="_blank"><span class="fa fa-github-square text-light"></span></a>
+          </li>
+
+          <li class="list-inline-item">
+            <a href="https://www.linkedin.com/company/opengenus" target="_blank"><span class="fa fa-linkedin text-light"></span></a>
+          </li>
+
+          <li class="list-inline-item">
+            <a href="mailto:team@opengenus.org" target="_blank"><span class="fa fa-envelope-o text-light"></span></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
