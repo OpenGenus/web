@@ -6,6 +6,9 @@
     <link rel="stylesheet" href="/static/intern.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:200,400,500" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, user-scalable=no">
+    <meta name="description" content="OpenGenus Foundation, Opengenus Intern details">
+    <meta name="keywords" content="OpenGenus, open-source, communities, offline internet.openGenus intern,intern">
+    <title>OpenGenus Intern</title>
   </head>
   <body>
     <nav class="navbar bg-light">
@@ -14,7 +17,7 @@
      </a>
       <a href=""><span class="navbar-brand h5 mb-0 text-uppercase font-weight-bold text-dark">OpenGenus</span></a>
       <div class="ml-auto">
-        <ul class="list-inline mb-0 text-center">
+        <ul class="list-inline mb-0 text-center nav">
           <li class="list-inline-item">
             <a href="https://twitter.com/opengenus" target="_blank"><span class="fa fa-twitter text-dark"></span></a>
           </li>
@@ -35,16 +38,16 @@
     </nav>
     <div class="fluid-container p-5">
       <div class="row p-1">
-        <div class="col-3 p-4">
+        <div class="col-sm-12 col-md-3">
           <div class="px-3">
             <img src="/static/user/intern/picture/{{username}}.jpeg" class="rounded w-100 mb-4" alt={{data.username}}>
             <h5 class="blue-color">{{data.username}}</h5>
             <h6 class="font-weight-light blue-color">{{data.profile}}</h6>
             <h6 class="font-weight-light purple-color">{{data.start}} - {{data.end}}</h6>
-            <button type="button" class="btn btn-primary btn-md btn-block mt-4 rounded-0 disclosure font-weight-light">Talk on Disclosure</button>
+            <a href={{data.discourse_link}} target="_blank"><button type="button" class="btn btn-dark btn-md btn-block mt-4 rounded-0 disclosure font-weight-light">Talk on Disclosure</button></a>
           </div>
         </div>
-        <div class="col-9 p-4">
+        <div class="col-sm-12 col-md-9">
           <div class="p-2">
             <h5 class="heading pl-3">About {{data.username}}</h5>
             <p class="pl-3 description py-1">{{data.about}}</p>
@@ -61,19 +64,19 @@
       </div>
       <div class="fixed-bottom bg-dark py-2">
         <ul class="list-inline mb-0 text-center">
-          <li class="list-inline-item">
+          <li class="list-inline-item px-1">
             <a href="https://twitter.com/opengenus" target="_blank"><span class="fa fa-twitter text-light"></span></a>
           </li>
 
-          <li class="list-inline-item">
+          <li class="list-inline-item px-1">
             <a href="https://github.com/opengenus" target="_blank"><span class="fa fa-github-square text-light"></span></a>
           </li>
 
-          <li class="list-inline-item">
+          <li class="list-inline-item px-1">
             <a href="https://www.linkedin.com/company/opengenus" target="_blank"><span class="fa fa-linkedin text-light"></span></a>
           </li>
 
-          <li class="list-inline-item">
+          <li class="list-inline-item px-1">
             <a href="mailto:team@opengenus.org" target="_blank"><span class="fa fa-envelope-o text-light"></span></a>
           </li>
         </ul>
