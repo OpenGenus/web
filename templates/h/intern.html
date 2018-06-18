@@ -9,22 +9,42 @@
   </head>
   <body>
     <nav class="navbar bg-light">
-      <a href=""><span class="navbar-brand mb-0 h1 text-uppercase text-dark">OpenGenus Foundation</span></a>
+      <a class="navbar-brand" href="#">
+       <img src="https://avatars3.githubusercontent.com/u/18506046?s=200&v=4" width="40" height="40" alt="OpenGenus Foundation">
+     </a>
+      <a href=""><span class="navbar-brand h5 mb-0 text-uppercase font-weight-bold text-dark">OpenGenus</span></a>
+      <div class="ml-auto">
+        <ul class="list-inline mb-0 text-center">
+          <li class="list-inline-item">
+            <a href="https://twitter.com/opengenus" target="_blank"><span class="fa fa-twitter text-dark"></span></a>
+          </li>
+
+          <li class="list-inline-item">
+            <a href="https://github.com/opengenus" target="_blank"><span class="fa fa-github-square text-dark"></span></a>
+          </li>
+
+          <li class="list-inline-item">
+            <a href="https://www.linkedin.com/company/opengenus" target="_blank"><span class="fa fa-linkedin text-dark"></span></a>
+          </li>
+
+          <li class="list-inline-item">
+            <a href="mailto:team@opengenus.org" target="_blank"><span class="fa fa-envelope-o text-dark"></span></a>
+          </li>
+        </ul>
+      </div>
     </nav>
     <div class="fluid-container p-5">
-      <div class="row p-2">
-        <div class="col-3 bg-light p-4 card-shadow">
-          <div class="w-50 p-2 mx-auto">
-            <img src="/static/user/intern/picture/{{username}}.jpeg" class="rounded-circle mw-100 mh-100" alt={{data.username}}>
-          </div>
-          <div class="py-4 px-3 mt-2">
-            <h4 class="font-weight-normal blue-color">{{data.username}}</h4>
-            <h5 class="font-weight-light blue-color">{{data.profile}}</h5>
+      <div class="row p-1">
+        <div class="col-3 p-4">
+          <div class="px-3">
+            <img src="/static/user/intern/picture/{{username}}.jpeg" class="rounded w-100 mb-4" alt={{data.username}}>
+            <h5 class="blue-color">{{data.username}}</h5>
+            <h6 class="font-weight-light blue-color">{{data.profile}}</h6>
             <h6 class="font-weight-light purple-color">{{data.start}} - {{data.end}}</h6>
-            <button type="button" class="btn btn-primary btn-lg btn-block mt-4 rounded-0 disclosure font-weight-light">Talk on Disclosure</button>
+            <button type="button" class="btn btn-primary btn-md btn-block mt-4 rounded-0 disclosure font-weight-light">Talk on Disclosure</button>
           </div>
         </div>
-        <div class="col-8 ml-auto bg-light p-4 card-shadow">
+        <div class="col-9 p-4">
           <div class="p-2">
             <h5 class="heading pl-3">About {{data.username}}</h5>
             <p class="pl-3 description py-1">{{data.about}}</p>
