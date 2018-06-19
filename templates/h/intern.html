@@ -6,9 +6,9 @@
     <link rel="stylesheet" href="/static/intern.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:200,400,500" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, user-scalable=no">
-    <meta name="description" content="OpenGenus Foundation, Opengenus Intern details">
-    <meta name="keywords" content="OpenGenus, open-source, communities, offline internet.openGenus intern,intern">
-    <title>OpenGenus Intern</title>
+    <meta name="description" content="OpenGenus Internship {{data.username}} {{data.profile}} {{data.about}} ">
+    <meta name="keywords" content="OpenGenus, open-source, communities, internship, {{data.username}}, {{data.profile}}">
+    <title>OpenGenus Intern: {{data.username}}</title>
   </head>
   <body>
     <nav class="navbar bg-light">
@@ -44,7 +44,7 @@
             <h5 class="blue-color">{{data.username}}</h5>
             <h6 class="font-weight-light blue-color text-dark">{{data.profile}}</h6>
             <h6 class="font-weight-light purple-color text-secondary">{{data.start}} - {{data.end}}</h6>
-            <a href={{data.discourse_link}} target="_blank"><button type="button" class="btn btn-primary btn-md btn-block mt-4 rounded-0 disclosure font-weight-light">Talk on Disclosure</button></a>
+            <a href={{data.discourse_link}} target="_blank"><button type="button" class="btn btn-primary btn-md btn-block mt-4 rounded-0 disclosure font-weight-light">Talk on Discourse</button></a>
           </div>
         </div>
         <div class="col-sm-12 col-md-9">
@@ -53,7 +53,7 @@
             <p class="pl-3 description py-1">{{data.about}}</p>
           </div>
           <div class="p-2">
-            <h5 class="heading pl-3">About Projects</h5>
+            <h5 class="heading pl-3">Projects</h5>
             <p class="pl-3 description py-1">{{data.project}}</p>
           </div>
           <div class="p-2">
